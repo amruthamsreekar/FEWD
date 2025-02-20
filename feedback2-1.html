@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+!
+<html>
+<head>
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            width: 300px;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form action="submit_feedback.php" method="post">
+            <input type="text" name="name" placeholder="Name (Optional)"><br>
+            <input type="email" name="email" placeholder="Email (Optional)"><br>
+            <input type="tel" name="phone" placeholder="Phone (Optional)"><br>
+            <select name="rating" required>
+                <option value="">Rate us</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select><br>
+            <textarea name="questions" placeholder="Any Questions?" required></textarea><br>
+            <textarea name="comments" placeholder="Additional Comments (Optional)"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
